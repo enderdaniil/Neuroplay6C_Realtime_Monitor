@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.info.InfoFragment"
+    android:id="@+id/info_view">
+
+    <TextView
+        android:id="@+id/text_info_BSF_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="16sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Current value of BSF filter: " />
+    <TextView
+        android:id="@+id/text_info_BSF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="16sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_BSF_constant"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_HPF_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_BSF_constant"
+        android:text="Current value of HPF filter: " />
+    <TextView
+        android:id="@+id/text_info_HPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_HPF_constant"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_BSF_constant"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_LPF_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_HPF_constant"
+        android:text="Current value of LPF filter: " />
+    <TextView
+        android:id="@+id/text_info_LPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_LPF_constant"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_HPF_constant"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_channels_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="16sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/divider2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Current channel quality status: " />
+
+    <TextView
+        android:id="@+id/text_info_channels_constant_O1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant"
+        android:text="O1: " />
+    <TextView
+        android:id="@+id/text_info_channels_dynamic_O1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_channels_constant_T3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_O1"
+        android:text="T3: " />
+    <TextView
+        android:id="@+id/text_info_channels_dynamic_T3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_O1"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_channels_constant_Fp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_T3"
+        android:text="Fp1: " />
+    <TextView
+        android:id="@+id/text_info_channels_dynamic_Fp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_T3"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_channels_constant_Fp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_Fp1"
+        android:text="Fp2: " />
+    <TextView
+        android:id="@+id/text_info_channels_dynamic_Fp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_Fp1"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_channels_constant_T4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_Fp2"
+        android:text="T4: " />
+    <TextView
+        android:id="@+id/text_info_channels_dynamic_T4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_Fp2"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_channels_constant_O2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_T4"
+        android:text="O2: " />
+    <TextView
+        android:id="@+id/text_info_channels_dynamic_O2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0sp"
+        android:layout_marginTop="4sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_channels_constant_Fp1"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_T4"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_device_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="16sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/divider3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Current device status: " />
+
+    <TextView
+        android:id="@+id/text_info_device_constant_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_device_constant"
+        android:text="Battery power: " />
+    <TextView
+        android:id="@+id/text_info_device_dynamic_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_device_constant_battery"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_device_constant"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_device_constant_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_info_device_constant_battery"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_device_constant_battery"
+        android:text="Model: " />
+    <TextView
+        android:id="@+id/text_info_device_dynamic_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_device_constant_battery"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_device_constant_battery"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_device_constant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_info_device_constant_battery"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_device_constant_model"
+        android:text="Name: " />
+    <TextView
+        android:id="@+id/text_info_device_dynamic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_device_constant_battery"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_device_constant_model"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_device_constant_serialNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_info_device_constant_battery"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_device_constant_name"
+        android:text="Serial number: " />
+    <TextView
+        android:id="@+id/text_info_device_dynamic_serialNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_device_constant_battery"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_device_constant_name"
+        android:text="wait for response" />
+
+    <TextView
+        android:id="@+id/text_info_time_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="400sp"
+        android:layout_marginTop="16sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4"
+        android:text="Last information update: " />
+    <TextView
+        android:id="@+id/text_info_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1sp"
+        android:layout_marginTop="16sp"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/text_info_time_constant"
+        app:layout_constraintTop_toBottomOf="@+id/divider4"
+        android:text="wait for response" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="2sp"
+        android:layout_height="0sp"
+        android:layout_marginStart="180sp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/divider4"
+        app:layout_constraintStart_toEndOf="@+id/text_info_BSF_constant"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="2sp"
+        android:layout_height="0sp"
+        android:layout_marginStart="140sp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/divider4"
+        app:layout_constraintStart_toEndOf="@+id/text_info_channels_constant"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="1278dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="100sp"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_info_channels_constant_O2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

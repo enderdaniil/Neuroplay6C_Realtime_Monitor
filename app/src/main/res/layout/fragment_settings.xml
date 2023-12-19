@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <TextView
+        android:id="@+id/currentDeviceInfoUpdateMillis_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="348sp"
+        android:layout_marginTop="10sp"
+        android:text="Current device information update time in milis: "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/currentDeviceInfoUpdateMillis_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="0sp"
+        android:singleLine="false"
+        android:text="1000"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
+        app:layout_constraintTop_toTopOf="parent"
+        android:digits="0123456789"
+        android:ems="4"
+        android:maxLength="5" />
+
+    <TextView
+        android:id="@+id/lastSpectrumUpdateMillis_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="348sp"
+        android:layout_marginTop="70sp"
+        android:text="Current last Spectrum update time in milis: "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
+        app:layout_constraintTop_toBottomOf="@+id/currentDeviceInfoUpdateMillis_constant" />
+    <EditText
+        android:id="@+id/lastSpectrumUpdateMillis_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="60dp"
+        android:singleLine="false"
+        android:text="1000"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
+        app:layout_constraintTop_toBottomOf="@+id/currentDeviceInfoUpdateMillis_constant"
+        android:digits="0123456789"
+        android:ems="4"
+        android:maxLength="5" />
+
+    <TextView
+        android:id="@+id/rhythmsUpdateMillis_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="348sp"
+        android:layout_marginTop="70sp"
+        android:text="Main Rhythms dashboard update time in milis: "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
+        app:layout_constraintTop_toBottomOf="@+id/lastSpectrumUpdateMillis_constant" />
+    <EditText
+        android:id="@+id/rhythmsUpdateMillis_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="60dp"
+        android:singleLine="false"
+        android:text="1000"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
+        app:layout_constraintTop_toBottomOf="@+id/lastSpectrumUpdateMillis_constant"
+        android:digits="0123456789"
+        android:ems="4"
+        android:maxLength="5" />
+
+    <TextView
+        android:id="@+id/ipAdress_constant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="348sp"
+        android:layout_marginTop="70sp"
+        android:text="Current NeuroplayPro server ip-adress and port: "
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
+        app:layout_constraintTop_toBottomOf="@+id/rhythmsUpdateMillis_constant" />
+    <EditText
+        android:id="@+id/ipAdress_dynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="60dp"
+        android:singleLine="false"
+        android:text="10.0.2.2:2336"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
+        app:layout_constraintTop_toBottomOf="@+id/rhythmsUpdateMillis_constant"
+        android:digits="0123456789.:"
+        android:ems="8"
+        android:maxLength="22" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250sp"
+        android:layout_marginTop="60dp"
+        android:text="Submit"
+        app:layout_constraintStart_toStartOf="@+id/rhythmsUpdateMillis_constant"
+        app:layout_constraintTop_toBottomOf="@+id/ipAdress_constant" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

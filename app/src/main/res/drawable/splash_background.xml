@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <layer-list>
+        <item
+            android:drawable="@drawable/svg_editor_image"/>
+    </layer-list>
+</selector>

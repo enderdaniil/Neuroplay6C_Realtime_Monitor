@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.rhythms.RhythmsFragment"
+    android:id="@+id/rhythms_view">
+
+    <TextView
+        android:id="@+id/text_view_rhythms_description_a"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="alfa=8-14Hz" />
+    <TextView
+        android:id="@+id/text_view_rhythms_description_a_dot"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="-70sp"
+        android:layout_marginStart="2sp"
+        app:layout_constraintStart_toEndOf="@+id/text_view_rhythms_description_a"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#49DBFC"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        android:text="." />
+
+    <TextView
+        android:id="@+id/text_view_rhythms_description_b"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_rhythms_description_a"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="beta=14-35Hz" />
+    <TextView
+        android:id="@+id/text_view_rhythms_description_b_dot"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="-70sp"
+        android:layout_marginStart="2sp"
+        app:layout_constraintStart_toEndOf="@+id/text_view_rhythms_description_b"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_rhythms_description_a"
+        android:textColor="#2F34E7"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        android:text="." />
+
+    <TextView
+        android:id="@+id/text_view_rhythms_description_g"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_rhythms_description_b"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="gamma=35-50Hz" />
+    <TextView
+        android:id="@+id/text_view_rhythms_description_g_dot"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="-70sp"
+        android:layout_marginStart="2sp"
+        app:layout_constraintStart_toEndOf="@+id/text_view_rhythms_description_g"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_rhythms_description_b"
+        android:textColor="#55EA00"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        android:text="." />
+
+    <TextView
+        android:id="@+id/text_view_rhythms_description_d"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_rhythms_description_g"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="delta=0.5-4Hz" />
+    <TextView
+        android:id="@+id/text_view_rhythms_description_d_dot"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="-70sp"
+        android:layout_marginStart="2sp"
+        app:layout_constraintStart_toEndOf="@+id/text_view_rhythms_description_d"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_rhythms_description_g"
+        android:textColor="#F41100"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        android:text="." />
+
+    <TextView
+        android:id="@+id/text_view_rhythms_description_t"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_rhythms_description_d"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="theta=4-8Hz" />
+    <TextView
+        android:id="@+id/text_view_rhythms_description_t_dot"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="-70sp"
+        android:layout_marginStart="2sp"
+        app:layout_constraintStart_toEndOf="@+id/text_view_rhythms_description_t"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_rhythms_description_d"
+        android:textColor="#FFE200"
+        android:textStyle="bold"
+        android:textSize="100sp"
+        android:text="." />
+
+    <TextView
+        android:id="@+id/text_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_Fp1"
+        android:layout_width="180sp"
+        android:layout_height="180sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="60sp"
+        app:layout_constraintStart_toEndOf="@+id/rhythms_pie_chart_T3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_T3"
+        android:layout_width="180sp"
+        android:layout_height="180sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rhythms_pie_chart_Fp1" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_O1"
+        android:layout_width="180sp"
+        android:layout_height="180sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="60sp"
+        app:layout_constraintStart_toEndOf="@+id/rhythms_pie_chart_T3"
+        app:layout_constraintTop_toBottomOf="@+id/rhythms_pie_chart_T3" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_Fp2"
+        android:layout_width="180sp"
+        android:layout_height="180sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="40sp"
+        app:layout_constraintStart_toEndOf="@+id/rhythms_pie_chart_Fp1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_T4"
+        android:layout_width="180sp"
+        android:layout_height="180sp"
+        android:layout_marginStart="60sp"
+        android:layout_marginTop="30sp"
+        app:layout_constraintStart_toEndOf="@+id/rhythms_pie_chart_Fp2"
+        app:layout_constraintTop_toBottomOf="@+id/rhythms_pie_chart_Fp2" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_O2"
+        android:layout_width="180sp"
+        android:layout_height="180sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginStart="40sp"
+        app:layout_constraintStart_toEndOf="@+id/rhythms_pie_chart_O1"
+        app:layout_constraintTop_toBottomOf="@+id/rhythms_pie_chart_T4" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_attention"
+        android:layout_width="160sp"
+        android:layout_height="160sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="60sp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_concentration"
+        android:layout_width="160sp"
+        android:layout_height="160sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginStart="60sp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/rhythms_pie_chart_attention" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_meditation"
+        android:layout_width="160sp"
+        android:layout_height="160sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginStart="60sp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/rhythms_pie_chart_concentration" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/rhythms_pie_chart_smr"
+        android:layout_width="160sp"
+        android:layout_height="160sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginStart="60sp"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/rhythms_pie_chart_meditation" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="2sp"
+        android:layout_height="798dp"
+        android:layout_marginStart="60sp"
+        android:background="@color/Black"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/rhythms_pie_chart_T4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
