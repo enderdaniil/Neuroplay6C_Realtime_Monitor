@@ -126,26 +126,7 @@ public class InfoFragment extends Fragment {
                 textViewTime.setText(String.valueOf(currentDeviceInfo.getTime()));
             }catch (Exception e) {
                 textViewTime.setText("failed");
-            }//*/
-/*
-            textViewBSF.setText(String.valueOf(currentDeviceInfo.getBSF()));
-            textViewHPF.setText(String.valueOf(currentDeviceInfo.getHPF()));
-            textViewLPF.setText(String.valueOf(currentDeviceInfo.getLPF()));
-
-            textViewO1.setText(String.valueOf(currentDeviceInfo.getQuality().get(0)));
-            textViewT3.setText(String.valueOf(currentDeviceInfo.getQuality().get(1)));
-            textViewFp1.setText(String.valueOf(currentDeviceInfo.getQuality().get(2)));
-            textViewFp2.setText(String.valueOf(currentDeviceInfo.getQuality().get(3)));
-            textViewT4.setText(String.valueOf(currentDeviceInfo.getQuality().get(4)));
-            textViewO2.setText(String.valueOf(currentDeviceInfo.getQuality().get(5)));
-
-            textViewBattery.setText(String.valueOf(currentDeviceInfo.getCurrentDeviceInfoDevice().getBattery()));
-            textViewModel.setText(String.valueOf(currentDeviceInfo.getCurrentDeviceInfoDevice().getModel()));
-            textViewName.setText(String.valueOf(currentDeviceInfo.getCurrentDeviceInfoDevice().getName()));
-            textViewSerialNumber.setText(String.valueOf(currentDeviceInfo.getCurrentDeviceInfoDevice().getSerialNumber()));
-
-            textViewTime.setText(String.valueOf(currentDeviceInfo.getTime()));
-*/
+            }
             try {
                 Thread.sleep(globalVariables.getCurrentDeviceInfoUpdateMillis());
             } catch (InterruptedException e) {

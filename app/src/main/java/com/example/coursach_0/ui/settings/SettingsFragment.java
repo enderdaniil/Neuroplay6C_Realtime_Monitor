@@ -23,14 +23,15 @@ import com.example.coursach_0.MainActivity;
 import com.example.coursach_0.R;
 import com.example.coursach_0.databinding.FragmentInfoBinding;
 import com.example.coursach_0.global_variables.globalVariables;
+import com.example.coursach_0.network.JsonReader;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class SettingsFragment extends Fragment {
     private SettingsViewModel mViewModel;
-
-    private EditText currentDeviceInfoUpdateMillisEditText;
-    private EditText lastSpectrumUpdateMillisEditText;
-    private EditText rhythmsUpdateMillisEditText;
-    private EditText neuroplayIp;
+    private TextInputEditText currentDeviceInfoUpdateMillisEditText;
+    private TextInputEditText lastSpectrumUpdateMillisEditText;
+    private TextInputEditText rhythmsUpdateMillisEditText;
+    private TextInputEditText neuroplayIp;
     private Button submitButton;
 
     public static SettingsFragment newInstance() {
@@ -121,6 +122,12 @@ public class SettingsFragment extends Fragment {
                 writeLastSpectrumUpdateMillisToPreference(globalVariables.getLastSpectrumUpdateMillis());
                 writeRhythmsUpdateMillisToPreference(globalVariables.getRhythmsUpdateMillis());
                 writeNeuroplayProServerconnectionString(globalVariables.getsUrl());
+
+                JsonReader.startZeroDevice();
+                try {
+                    JsonReader.startZeroDevice();
+                    JsonReader.enableDataGrabMode();
+                } catch (Exception e) {}
             }
         });
 

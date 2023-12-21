@@ -7,32 +7,57 @@
     android:layout_height="match_parent"
     tools:context=".ui.settings.SettingsFragment">
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/settings_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="200sp"
+        android:layout_marginEnd="150sp"
+        android:layout_marginTop="16sp"
+        app:cardElevation="16dp"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="2dp" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content" >
     <TextView
         android:id="@+id/currentDeviceInfoUpdateMillis_constant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="348sp"
-        android:layout_marginTop="10sp"
+        android:layout_marginStart="150sp"
+        android:layout_marginTop="32sp"
         android:text="Current device information update time in milis: "
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <EditText
-        android:id="@+id/currentDeviceInfoUpdateMillis_dynamic"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/currentDeviceInfoUpdateMillis_dynamic_container"
+        android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="0sp"
-        android:singleLine="false"
-        android:text="1000"
-        android:textAlignment="center"
+        android:layout_marginTop="-18sp"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/currentDeviceInfoUpdateMillis_constant"
         android:digits="0123456789"
         android:ems="4"
-        android:maxLength="5" />
+        android:maxLength="5"
+        app:helperTextEnabled="true"
+        app:helperText="1-99999">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/currentDeviceInfoUpdateMillis_dynamic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:digits="0123456789"
+            android:maxLength="5"
+            android:text="10000"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/lastSpectrumUpdateMillis_constant"
@@ -45,7 +70,32 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
         app:layout_constraintTop_toBottomOf="@+id/currentDeviceInfoUpdateMillis_constant" />
-    <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputFilledStyle"
+                android:id="@+id/lastSpectrumUpdateMillis_dynamic_container"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="-18sp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/lastSpectrumUpdateMillis_constant"
+                app:layout_constraintTop_toTopOf="@+id/lastSpectrumUpdateMillis_constant"
+                android:digits="0123456789"
+                android:ems="4"
+                android:maxLength="5"
+                app:helperTextEnabled="true"
+                app:helperText="1-99999">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastSpectrumUpdateMillis_dynamic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="10000"
+                    android:digits="0123456789"
+                    android:maxLength="5"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+    <!--<EditText
         android:id="@+id/lastSpectrumUpdateMillis_dynamic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/currentDeviceInfoUpdateMillis_constant"
         android:digits="0123456789"
         android:ems="4"
-        android:maxLength="5" />
+        android:maxLength="5" />-->
 
     <TextView
         android:id="@+id/rhythmsUpdateMillis_constant"
@@ -72,7 +122,32 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
         app:layout_constraintTop_toBottomOf="@+id/lastSpectrumUpdateMillis_constant" />
-    <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputFilledStyle"
+                android:id="@+id/rhythmsUpdateMillis_dynamic_container"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="-18sp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/rhythmsUpdateMillis_constant"
+                app:layout_constraintTop_toTopOf="@+id/rhythmsUpdateMillis_constant"
+                android:digits="0123456789"
+                android:ems="4"
+                android:maxLength="5"
+                app:helperTextEnabled="true"
+                app:helperText="1-99999">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rhythmsUpdateMillis_dynamic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="10000"
+                    android:digits="0123456789"
+                    android:maxLength="5"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+    <!--<EditText
         android:id="@+id/rhythmsUpdateMillis_dynamic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lastSpectrumUpdateMillis_constant"
         android:digits="0123456789"
         android:ems="4"
-        android:maxLength="5" />
+        android:maxLength="5" />-->
 
     <TextView
         android:id="@+id/ipAdress_constant"
@@ -99,7 +174,32 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/currentDeviceInfoUpdateMillis_constant"
         app:layout_constraintTop_toBottomOf="@+id/rhythmsUpdateMillis_constant" />
-    <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputFilledStyle"
+                android:id="@+id/ipAdress_dynamic_container"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="-18sp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/ipAdress_constant"
+                app:layout_constraintTop_toTopOf="@+id/ipAdress_constant"
+                android:digits="0123456789"
+                android:ems="4"
+                android:maxLength="5"
+                app:helperTextEnabled="true"
+                app:helperText="1-99999">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ipAdress_dynamic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="10.0.2.2:2336"
+                    android:digits="0123456789.:"
+                    android:maxLength="22"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+    <!--<EditText
         android:id="@+id/ipAdress_dynamic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,16 +213,21 @@
         app:layout_constraintTop_toBottomOf="@+id/rhythmsUpdateMillis_constant"
         android:digits="0123456789.:"
         android:ems="8"
-        android:maxLength="22" />
+        android:maxLength="22" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <Button
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="250sp"
+        android:layout_marginStart="410sp"
         android:layout_marginTop="60dp"
         android:text="Submit"
-        app:layout_constraintStart_toStartOf="@+id/rhythmsUpdateMillis_constant"
-        app:layout_constraintTop_toBottomOf="@+id/ipAdress_constant" />
+        android:textSize="20sp"
+        style="@style/Widget.Material3.Button"
+        app:layout_constraintStart_toStartOf="@+id/settings_card"
+        app:layout_constraintTop_toBottomOf="@+id/settings_card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

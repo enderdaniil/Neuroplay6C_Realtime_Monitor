@@ -16,7 +16,7 @@
         android:layout_height="wrap_content">
     <TextView
         android:id="@+id/help_text_1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Для того, чтобы протестировать данное приложение необходимо:\n
 1) Установить приложение NeuroPlayPro на ПК в той же локальной сети, что и мобильное устройство.\n
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/help_text_1" />
     <TextView
         android:id="@+id/help_text_1_1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="
 3.1) Нажать на GeneratorDevice на вкладке устройства:"
@@ -50,7 +50,7 @@
 
     <TextView
         android:id="@+id/help_text_2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="
 4) В настройках приложения вписать ip ПК в локальной сети, а также порт на котором запущен NeuroplaPro (обычно 2336)..\n

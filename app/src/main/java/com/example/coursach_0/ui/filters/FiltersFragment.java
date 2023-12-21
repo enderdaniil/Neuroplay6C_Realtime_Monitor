@@ -37,7 +37,7 @@ public class FiltersFragment extends Fragment {
                                                String barLabel) {
         ArrayList<BarEntry> barEntries = new ArrayList<BarEntry>();
         Float currentXValue = 0.0F;
-///*
+
         try {
             for (int i = 0; i < 257; i += 1) {
                 barEntries.add(new BarEntry(currentXValue,
@@ -49,13 +49,7 @@ public class FiltersFragment extends Fragment {
                 barEntries.add(new BarEntry(currentXValue, 0f));
                 currentXValue += lastSpectrum.getFrequencyStepHz().floatValue();
             }
-        }//*/
-        /*
-        for (int i = 0; i < 257; i += 1) {
-            barEntries.add(new BarEntry(currentXValue,
-                    lastSpectrum.getData().get(channelNumber).get(i).floatValue()));
-            currentXValue += lastSpectrum.getFrequencyStepHz().floatValue();
-        }*/
+        }
 
         try {
             Thread.sleep(globalVariables.getLastSpectrumUpdateMillis());

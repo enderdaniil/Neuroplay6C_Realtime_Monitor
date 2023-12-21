@@ -11,9 +11,9 @@
         android:id="@+id/text_info_BSF_constant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8sp"
-        android:layout_marginTop="16sp"
         android:layout_gravity="left"
+        android:layout_marginTop="16sp"
+        android:layout_marginStart="8sp"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,11 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1sp"
-        android:layout_marginTop="16sp"
+        android:layout_marginTop="1sp"
         android:layout_gravity="left"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/text_info_BSF_constant"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_info_BSF_constant"
         android:text="wait for response" />
 
     <TextView
